@@ -1,2 +1,8 @@
 # 프로젝트 제외 경로
 /bin/
+/.idea/
+/.settings/
+.classpath
+.project
+mybatistest.iml
+mybatis-3.4.6.jar
