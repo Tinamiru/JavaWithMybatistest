@@ -8,6 +8,8 @@
 	<settings>
 		<!-- DB 컬럼명을 낙타표기법으로 속성명과 자동 매핑하도록 설정하기 -->
 		<setting name="mapUnderscoreToCamelCase" value="true" />
+		
+		<setting name="logImpl" value="LOG4J"/>
 	</settings>
 
 	<typeAliases>
@@ -15,12 +17,12 @@
 			alias="memVO" />
 	</typeAliases>
 
-	<environments default="development"> 
+	<environments default="development">
 		<environment id="development">
 			<transactionManager type="JDBC" />
 			<dataSource type="POOLED">
-				<property name="driver" value="${driver}" />
 				<property name="url" value="${url}" />
+				<property name="driver" value="${driver}" />
 				<property name="username" value="${user}" />
 				<property name="password" value="${password}" />
 			</dataSource>
@@ -30,6 +32,9 @@
 	<mappers>
 		<mapper resource="kr/or/ddit/basic/memberTest.xml" />
 		<mapper resource="mapper/member.xml" />
+		<mapper resource="mapper/member2.xml" />
 	</mappers>
+
+
 
 </configuration>
